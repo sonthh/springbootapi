@@ -24,8 +24,9 @@ public class SpringbootapiApplication extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers("/api/**").permitAll().anyRequest().authenticated().and()
-				.httpBasic();
+		http.csrf().disable().authorizeRequests()
+				.antMatchers("/api/**").permitAll().anyRequest().authenticated()
+				.and().httpBasic();
 		http.cors(); // CẤU HÌNH Access-Control-Allow-Origin CHO ANGULAR GỌI API
 	}
 
