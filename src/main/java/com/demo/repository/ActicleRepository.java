@@ -11,6 +11,7 @@ import com.demo.entity.Acticle;
 
 @Repository
 public interface ActicleRepository extends CrudRepository<Acticle, Integer>  {
-	@Query("from Acticle")//jpal hql
+
+	@Query("from Acticle")//jpql hql
 	public List<Acticle> findFilter(Pageable pageable);
 }

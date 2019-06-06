@@ -7,16 +7,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.demo.repository.CategoryRepository;
-import com.demo.service.ActicleService;
 
 @Controller
 public class IndexController {
 
-	@Autowired
-	private ActicleService acticleService;
+//	@Autowired
+//	private ActicleService acticleService;
 
 	@Autowired
 	private CategoryRepository categoryRepository;
+
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
 
@@ -35,6 +35,7 @@ public class IndexController {
 
 	@GetMapping("demo")
 	public String demo() {
+
 		return "index";
 	}
 
