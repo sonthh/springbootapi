@@ -2852,37 +2852,3 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2019-06-11 12:49:44.268  INFO 8600 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-06-11 12:49:44.271  INFO 8600 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-06-11 12:49:44.277  INFO 8600 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2019-06-11 12:57:06.719  INFO 8600 --- [Thread-42] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-06-11 12:57:06.721  INFO 8600 --- [Thread-42] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-06-11 12:57:06.722  INFO 8600 --- [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2019-06-11 12:57:06.728  INFO 8600 --- [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2019-06-11 12:57:07.291  INFO 8600 --- [restartedMain] com.demo.SpringbootapiApplication        : Starting SpringbootapiApplication on DESKTOP-RRC9P7A with PID 8600 (E:\Study\Springboot\springbootapi\target\classes started by Admin in E:\Study\Springboot\springbootapi)
-2019-06-11 12:57:07.291  INFO 8600 --- [restartedMain] com.demo.SpringbootapiApplication        : No active profile set, falling back to default profiles: default
-2019-06-11 12:57:07.772  INFO 8600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-06-11 12:57:07.790  INFO 8600 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 2 repository interfaces.
-2019-06-11 12:57:07.897  INFO 8600 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c35c4f92] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-06-11 12:57:07.900  INFO 8600 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2019-06-11 12:57:07.919  INFO 8600 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1ec48a93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-06-11 12:57:08.163  INFO 8600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-06-11 12:57:08.164  INFO 8600 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-06-11 12:57:08.164  INFO 8600 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-06-11 12:57:08.233  INFO 8600 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-06-11 12:57:08.233  INFO 8600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 938 ms
-2019-06-11 12:57:08.349  INFO 8600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2019-06-11 12:57:08.349  WARN 8600 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-06-11 12:57:08.353  INFO 8600 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2019-06-11 12:57:08.363  INFO 8600 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-06-11 12:57:08.384  INFO 8600 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-06-11 12:57:08.487  INFO 8600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-06-11 12:57:08.693  INFO 8600 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-06-11 12:57:08.888  INFO 8600 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ebdff5, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f7c3f8c, org.springframework.security.web.header.HeaderWriterFilter@742f33d4, org.springframework.web.filter.CorsFilter@48457e7b, org.springframework.security.web.csrf.CsrfFilter@3927ac5c, org.springframework.security.web.authentication.logout.LogoutFilter@a0c6183, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25d0f77f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@286cc182, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21ac0e89, org.springframework.security.web.session.SessionManagementFilter@4b3d2ffb, org.springframework.security.web.access.ExceptionTranslationFilter@18be4f0b]
-2019-06-11 12:57:09.015  INFO 8600 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-06-11 12:57:09.023  WARN 8600 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-06-11 12:57:09.055  WARN 8600 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-06-11 12:57:09.067  INFO 8600 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-06-11 12:57:09.143  INFO 8600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-06-11 12:57:09.165  INFO 8600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-06-11 12:57:09.167  INFO 8600 --- [restartedMain] com.demo.SpringbootapiApplication        : Started SpringbootapiApplication in 1.914 seconds (JVM running for 6556.964)
-2019-06-11 12:57:09.170  INFO 8600 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
