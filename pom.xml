@@ -117,7 +117,7 @@
 				<version>2.3</version>
 
 				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<!--<failOnMissingWebXml>false</failOnMissingWebXml>-->
 				</configuration>
 				<executions>
 					<execution>
