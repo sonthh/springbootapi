@@ -12,6 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 @EnableWebSecurity
 
@@ -31,16 +32,17 @@ public class SpringbootapiApplication extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests()
-				.antMatchers("/api/**").permitAll().anyRequest().authenticated()
-				.and().httpBasic();
+//		http.csrf().disable().authorizeRequests()
+//				.antMatchers("/api/**", "/demo").permitAll().anyRequest().authenticated()
+//				.and().httpBasic();
 		http.cors(); // CẤU HÌNH Access-Control-Allow-Origin CHO ANGULAR GỌI API
 	}
 
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().antMatchers("/css/**", "/js/**", "/images/**");
-	}
+//	@Override
+//	public void configure(WebSecurity web) throws Exception {
+////		web.ignoring().antMatchers("/css/**", "/js/**", "/images/**");
+//		web.ignoring().antMatchers("/resources/**");
+//	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
