@@ -12,14 +12,16 @@ import java.util.List;
 
 public class Crawler {
     public static void main(String[] args) throws IOException {
-        System.out.println(getAllImage());
-
+        System.out.println(getAllImage(1));
     }
 
-
-    public static List<String> getAllImage() throws IOException {
+    public static List<String> getAllImage(Integer page) throws IOException {
         List<String> list = new ArrayList<>();
-        Document doc = Jsoup.connect("http://tophinh.com/anh-girl-xinh").get();
+        String url = "http://tophinh.com/anh-girl-xinh";
+        if (page > 1) {
+            url += "/page/" + page;
+        }
+        Document doc = Jsoup.connect(url).get();
         Elements listLinkPost = doc.select(".list .item .thumb");
         for (Element e : listLinkPost) {
             Document post = Jsoup.connect(e.attr("href")).get();

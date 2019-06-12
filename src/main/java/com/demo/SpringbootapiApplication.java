@@ -1,5 +1,6 @@
 package com.demo;
 
+import nz.net.ultraq.thymeleaf.LayoutDialect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -77,6 +78,11 @@ public class SpringbootapiApplication extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder();
 	}
 
+	/*bean dùng tách ghép giao diện có hoặc không*/
+//	@Bean
+//	public LayoutDialect layoutDialect() {
+//		return new LayoutDialect();
+//	}
 	/*
 	 * @Bean CharacterEncodingFilter characterEncodingFilter() {
 	 * CharacterEncodingFilter filter = new CharacterEncodingFilter();

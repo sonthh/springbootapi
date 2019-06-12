@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,22 +27,27 @@ public class IndexController {
 
     @GetMapping("index")
     public String index() {
-        LOGGER.trace("This is TRACE");
-        LOGGER.debug("This is DEBUG");
-        LOGGER.info("This is INFO");
-        LOGGER.warn("This is WARN");
-        LOGGER.error("This is ERROR");
+//        LOGGER.trace("This is TRACE");
+//        LOGGER.debug("This is DEBUG");
+//        LOGGER.info("This is INFO");
+//        LOGGER.warn("This is WARN");
+//        LOGGER.error("This is ERROR");
 
         // System.out.println(sessionFactory);
+        System.out.println("ffffffhhhhhhhhhhhhhhfffff");
         System.out.println(categoryRepository.findAll());
-        return "index";
+        return "view";
     }
 
-    @GetMapping("demo")
-    public String demo(ModelMap modelMap) throws IOException {
-        List<String> images = Crawler.getAllImage();
+    @GetMapping(value = {"demo"})
+    public String demo(@RequestParam(name = "page", required = false) Integer page, ModelMap modelMap) throws IOException {
+        if (page == null) page = 1;
+        List<String> images = Crawler.getAllImage(page);
 
         modelMap.addAttribute("images", images);
+        modelMap.addAttribute("page", page);
+        int a = 16;
+        modelMap.addAttribute("numberOfPages", a);
         return "index";
     }
 

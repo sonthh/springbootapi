@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>Index</title>
-    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 <style>
 
@@ -24,14 +24,36 @@
         border-radius: 36%;
         cursor: pointer;
     }
+    @media only screen and (max-width : 576px)
+    {
+        .phantrang {
+            overflow-x: auto;
+            flex-basis: 100%;
+        }
+    }
 
 </style>
 </head>
 <body>
 	<div class="container-fluid">
+        <div class="row phantrang">
+
+            <div class="col-sm-12">
+                <nav class="d-flex justify-content-center mt-2">
+                    <th:block th:replace="'../common/pagination' :: pagination(${page}, ${numberOfPages}, '/demo')"></th:block>
+                </nav>
+            </div>
+        </div>
 		<div class="row">
 			<div class="col-md-6 col-lg-4 col-xl-3 item" th:each="img : ${images}">
-				<img alt="" th:src="${img}" />
+                <!--<th:block th:if="${T(com.demo.util.CheckingUrlImageNotFoundUtil).checkUrlImage(img)}">-->
+                    <img alt="" th:src="${img}" />
+
+                <!--</th:block>-->
+				<!--<th:block th:unless="${T(com.demo.util.CheckingUrlImageNotFoundUtil).checkUrlImage(img)}">-->
+                    <!--<img alt="" src="" />-->
+                <!--</th:block>-->
+
 			</div>
 		</div>
 	</div>
@@ -39,10 +61,10 @@
 
     </div>
 
-    <script th:src="@{js/jquery-3.3.1.min.js}" ></script>
+    <script th:src="@{/js/jquery-3.3.1.min.js}" ></script>
     <script  src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
-    <script th:src="@{js/popper.min.js}" ></script>
-    <script th:src="@{js/bootstrap.min.js}" ></script>
+    <script th:src="@{/js/popper.min.js}" ></script>
+    <script th:src="@{/js/bootstrap.min.js}" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script>
 
