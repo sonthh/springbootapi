@@ -6572,3 +6572,7 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2019-06-12 18:18:41.364  INFO 6548 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-06-12 18:18:41.364  INFO 6548 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-06-12 18:18:41.415  INFO 6548 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-06-12 19:49:23.365  INFO 6548 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-12 19:49:23.370  INFO 6548 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-12 19:49:23.403  INFO 6548 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-06-12 19:49:23.408  INFO 6548 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
